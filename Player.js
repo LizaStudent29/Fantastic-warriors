@@ -1,3 +1,5 @@
+import { Weapon, Arm, Bow, Sword, Knife, Staff, LongBow, Axe, StormStaff } from './Weapon.js';
+
 // Базовый класс Player
 class Player {
     constructor(position, name) {
@@ -131,17 +133,8 @@ class Player {
     }
 }
 
-// Тесты для Player
-// let player = new Player(10, "Бэтмен");
-// console.log(player.getLuck()); // Рандомное значение от 0 до 1.1
-// console.log(player.getDamage(1)); // Расчёт урона
-// player.takeDamage(30);
-// console.log(player.life); // 70
-// player.takeDamage(90);
-// console.log(player.isDead()); // true
-
 // Воины, Лучники и Маги
-export class Warrior extends Player {
+class Warrior extends Player {
     constructor(position, name) {
         super(position, name);
         this.life = 120;
@@ -161,7 +154,7 @@ export class Warrior extends Player {
     }
 }
 
-export class Archer extends Player {
+class Archer extends Player {
     constructor(position, name) {
         super(position, name);
         this.life = 80;
@@ -181,7 +174,7 @@ export class Archer extends Player {
     }
 }
 
-export class Mage extends Player {
+class Mage extends Player {
     constructor(position, name) {
         super(position, name);
         this.life = 70;
@@ -202,25 +195,8 @@ export class Mage extends Player {
     }
 }
 
-// Тесты классов-наследников
-// let warrior = new Warrior(0, "Алёша Попович");
-// console.log(warrior.life, warrior.magic); // 120 20
-// warrior.takeDamage(50);
-// console.log(warrior.life, warrior.magic); // 70 20
-// warrior.takeDamage(5);
-// console.log(warrior.life, warrior.magic); // 70 15
-
-// let archer = new Archer(5, "Леголас");
-// console.log(archer.getDamage(2)); // Рассчёт урона с учётом расстояния
-
-// let mage = new Mage(10, "Гендальф");
-// console.log(mage.life, mage.magic); // 70 100
-// mage.takeDamage(50);
-// console.log(mage.life, mage.magic); // 45 88
-
-
 // Улучшенные классы игроков
-export class Dwarf extends Warrior {
+class Dwarf extends Warrior {
     constructor(position, name) {
         super(position, name);
         this.life = 130;
@@ -240,7 +216,7 @@ export class Dwarf extends Warrior {
     }
 }
 
-export class Crossbowman extends Archer {
+class Crossbowman extends Archer {
     constructor(position, name) {
         super(position, name);
         this.life = 85;
@@ -252,7 +228,7 @@ export class Crossbowman extends Archer {
     }
 }
 
-export class Demiurge extends Mage {
+class Demiurge extends Mage {
     constructor(position, name) {
         super(position, name);
         this.life = 80;
@@ -272,16 +248,4 @@ export class Demiurge extends Mage {
     }
 }
 
-// export default { Warrior, Archer };
-
-// Тесты для улучшенных классов
-// let dwarf = new Dwarf(3, "Торин");
-// console.log(dwarf.life, dwarf.magic); // 130 20
-// dwarf.takeDamage(20);
-// console.log(dwarf.life); // 110 (или меньше, если сработает особенность)
-
-// let crossbowman = new Crossbowman(5, "Леголас 2.0");
-// console.log(crossbowman.getDamage(3)); // Урон с учётом улучшенного оружия
-
-// let demiurge = new Demiurge(7, "Создатель");
-// console.log(demiurge.getDamage(2)); // Урон, увеличенный на 50% при удачных условиях
+export { Player, Dwarf, Crossbowman, Demiurge, Mage, Archer, Warrior };

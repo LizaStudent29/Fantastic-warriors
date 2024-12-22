@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JS final project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f8ea101d8df642d3fdf55d7a10c33f51f192482")]
 [assembly: System.Reflection.AssemblyProductAttribute("JS final project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JS final project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

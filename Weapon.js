@@ -26,38 +26,38 @@ class Weapon {
 }
 
 // Примеры стандартного оружия
-export class Arm extends Weapon {
+class Arm extends Weapon {
     constructor() {
         super("Рука", 1, Infinity, 1);
     }
 }
 
-export class Bow extends Weapon {
+class Bow extends Weapon {
     constructor() {
         super("Лук", 10, 200, 3);
     }
 }
 
-export class Sword extends Weapon {
+class Sword extends Weapon {
     constructor() {
         super("Меч", 25, 500, 1);
     }
 }
 
-export class Knife extends Weapon {
+class Knife extends Weapon {
     constructor() {
         super("Нож", 5, 300, 1);
     }
 }
 
-export class Staff extends Weapon {
+class Staff extends Weapon {
     constructor() {
         super("Посох", 8, 300, 2);
     }
 }
 
 // Примеры улучшенного оружия
-export class LongBow extends Bow {
+class LongBow extends Bow {
     constructor() {
         super();
         this.name = "Длинный лук";
@@ -66,7 +66,7 @@ export class LongBow extends Bow {
     }
 }
 
-export class Axe extends Sword {
+class Axe extends Sword {
     constructor() {
         super();
         this.name = "Секира";
@@ -75,7 +75,7 @@ export class Axe extends Sword {
     }
 }
 
-export class StormStaff extends Staff {
+class StormStaff extends Staff {
     constructor() {
         super();
         this.name = "Посох Бури";
@@ -84,12 +84,5 @@ export class StormStaff extends Staff {
     }
 }
 
-// Тестовые примеры
-// let bow = new Bow();
-// console.log(bow.getDamage(), bow.durability); // 10 200
-// bow.takeDamage(100);
-// console.log(bow.getDamage(), bow.durability); // 10 100
-// bow.takeDamage(50);
-// console.log(bow.getDamage(), bow.durability); // 5 50
-// bow.takeDamage(150);
-// console.log(bow.getDamage(), bow.durability); // 0 0
+export { Weapon, Arm, Bow, Sword, Knife, Staff, LongBow, Axe, StormStaff };
+
