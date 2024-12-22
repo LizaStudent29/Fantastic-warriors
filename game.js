@@ -25,9 +25,8 @@ let warrior = new Warrior(0, "Алёша Попович");
 let archer = new Archer(5, "Леголас");
 let mage = new Mage(10, "Гендальф");
 let dwarf = new Dwarf(8, "Торин");
-let dwarf2 = new Dwarf(7, "Буся");
 
-let players = [warrior, archer, mage, dwarf, dwarf2];
+let players = [warrior, archer, mage, dwarf];
 
 // Запуск игры
 play(players);
